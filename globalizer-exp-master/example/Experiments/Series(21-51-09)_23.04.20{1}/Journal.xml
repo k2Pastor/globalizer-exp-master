@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<journal>
+
+ <exp0>
+
+<date>
+23.04.2020 21:51:09
+</date>
+<expPath>
+D:\globalizer-exp-master\globalizer-exp-master\example\Experiments\Series(21-51-09)_23.04.20{1}\[21-51-09]_23.04.20_{1}\Log.txt
+</expPath>
+ <confPath>
+D:\globalizer-exp-master\globalizer-exp-master\example\Configurations\noPlot.xml
+</confPath>
+
+ </exp0>
+
+ <exp1>
+
+<date>
+23.04.2020 21:51:09
+</date>
+<expPath>
+D:\globalizer-exp-master\globalizer-exp-master\example\Experiments\Series(21-51-09)_23.04.20{1}\[21-51-09]_23.04.20_{2}\Log.txt
+</expPath>
+ <confPath>
+D:\globalizer-exp-master\globalizer-exp-master\example\Configurations\NoPrint.xml
+</confPath>
+
+ </exp1>
+
+ <exp2>
+
+<date>
+23.04.2020 21:51:09
+</date>
+<expPath>
+D:\globalizer-exp-master\globalizer-exp-master\example\Experiments\Series(21-51-09)_23.04.20{1}\[21-51-09]_23.04.20_{3}\Log.txt
+</expPath>
+ <confPath>
+D:\globalizer-exp-master\globalizer-exp-master\example\Configurations\One.xml
+</confPath>
+
+ </exp2>
+
+ <exp3>
+
+<date>
+23.04.2020 21:51:09
+</date>
+<expPath>
+D:\globalizer-exp-master\globalizer-exp-master\example\Experiments\Series(21-51-09)_23.04.20{1}\[21-51-09]_23.04.20_{4}\Log.txt
+</expPath>
+ <confPath>
+D:\globalizer-exp-master\globalizer-exp-master\example\Configurations\Strong.xml
+</confPath>
+
+ </exp3>
+
+ <exp4>
+
+<date>
+23.04.2020 21:51:10
+</date>
+<expPath>
+D:\globalizer-exp-master\globalizer-exp-master\example\Experiments\Series(21-51-09)_23.04.20{1}\[21-51-10]_23.04.20_{5}\Log.txt
+</expPath>
+ <confPath>
+D:\globalizer-exp-master\globalizer-exp-master\example\Configurations\Two.xml
+</confPath>
+
+ </exp4>
+
+</journal>
+<?include somedata?>

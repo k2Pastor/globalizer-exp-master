@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<exe>
+ <Prog>examin.exe</Prog>
+
+  <key0>-rEps</key0>
+   <par0>0.012</par0>
+
+  <key1>-Epsilon</key1>
+   <par1>0.07</par1>
+
+  <key2>-Dimension</key2>
+   <par2>2</par2>
+
+</exe>
+<?include somedata?>

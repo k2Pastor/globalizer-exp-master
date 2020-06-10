@@ -1,0 +1,8 @@
+-IsPrintFile = true
+-IsPlot = true
+-r = 3.5;4;5;6
+-rEps = 0.02;0.03;0.04
+-m = 11;12;13;14
+-Dimension = 2
+-libPath = stronginc3.dll
+-iterPointsSavePath = ttt.dat

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<exe>
+ <Prog>examin.exe</Prog>
+
+  <key0>-IsPrintFile</key0>
+   <par0>true</par0>
+
+  <key1>-IsPlot</key1>
+   <par1>true</par1>
+
+  <key2>-r</key2>
+   <par2>3.5</par2>
+
+  <key3>-rEps</key3>
+   <par3>0.02</par3>
+
+  <key4>-Dimension</key4>
+   <par4>2</par4>
+
+  <key5>-libPath</key5>
+   <par5>stronginc3.dll</par5>
+
+  <key6>-iterPointsSavePath</key6>
+   <par6>itr.dat</par6>
+
+  <key7>-rs </key7>
+   <par7>2.3_2.3_2.3_2.3</par7>
+
+</exe>
+<?include somedata?>
