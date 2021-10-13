@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<exe>
+ <Prog>examin.exe</Prog>
+
+  <key0>-IsPrintFile</key0>
+   <par0>true</par0>
+
+  <key1>-StepPrintMessages</key1>
+   <par1>441</par1>
+
+  <key2>-m</key2>
+   <par2>12</par2>
+
+  <key3>-Dimension</key3>
+   <par3>2</par3>
+
+</exe>
+<?include somedata?>

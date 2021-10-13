@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<exe>
+ <Prog>examin.exe</Prog>
+
+  <key0>-libPath</key0>
+   <par0>stronginc5.dll</par0>
+
+</exe>
+<?include somedata?>

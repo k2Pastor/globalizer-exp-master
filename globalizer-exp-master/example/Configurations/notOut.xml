@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<exe>
+ <Prog>examin.exe</Prog>
+
+  <key0>-r</key0>
+   <par0>3</par0>
+
+  <key1>-rEps</key1>
+   <par1>0.015</par1>
+
+  <key2>-HELP</key2>
+   <par2></par2>
+
+</exe>
+<?include somedata?>

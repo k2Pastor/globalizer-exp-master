@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<exe>
+ <Prog>examin.exe</Prog>
+
+  <key0>-libPath</key0>
+   <par0>grishagin.dll</par0>
+
+  <key1>-libConfigPath</key1>
+   <par1>grishagin_conf.xml</par1>
+
+</exe>
+<?include somedata?>

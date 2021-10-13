@@ -1,0 +1,90 @@
+Iteration = 2
+min = 13.665152 
+x[0] = -0.198047 
+x[1] = -0.198047 
+
+M[0] = 1.000000 
+NumberOfTrials = 1
+Solve time = 0.000037 
+
+
+Iteration = 10
+min = 4.342854 
+x[0] = -1.100391 
+x[1] = 0.962109 
+
+M[0] = 43.332029 
+NumberOfTrials = 9
+Solve time = 0.000683 
+
+
+Iteration = 62
+min = 3.176407 
+x[0] = -0.096484 
+x[1] = 0.950391 
+
+M[0] = 247.437910 
+NumberOfTrials = 61
+Solve time = 0.001254 
+
+
+Iteration = 104
+min = 1.029228 
+x[0] = -0.010547 
+x[1] = -0.987109 
+
+M[0] = 350.525430 
+NumberOfTrials = 103
+Solve time = 0.001739 
+
+
+Iteration = 218
+min = 0.368411 
+x[0] = -0.037891 
+x[1] = 0.020703 
+
+M[0] = 350.525430 
+NumberOfTrials = 217
+Solve time = 0.002429 
+
+
+Iteration = 276
+min = 0.229889 
+x[0] = 0.032422 
+x[1] = -0.010547 
+
+M[0] = 354.730287 
+NumberOfTrials = 275
+Solve time = 0.003008 
+
+
+Iteration = 644
+min = 0.229749 
+x[0] = -0.002734 
+x[1] = -0.033984 
+
+M[0] = 543.930080 
+NumberOfTrials = 643
+Solve time = 0.004726 
+
+
+Iteration = 823
+min = 0.034432 
+x[0] = -0.002734 
+x[1] = 0.012891 
+
+M[0] = 543.930080 
+NumberOfTrials = 822
+Solve time = 0.005748 
+
+
+Iteration = 860
+min = 0.034432 
+x[0] = -0.002734 
+x[1] = 0.012891 
+
+M[0] = 543.930080 
+NumberOfTrials = 859
+Solve time = 0.011104 
+
+

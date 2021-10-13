@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <dimension>1</dimension>
+  <lower>80.0</lower>
+  <upper>90.0</upper>
+</config>
