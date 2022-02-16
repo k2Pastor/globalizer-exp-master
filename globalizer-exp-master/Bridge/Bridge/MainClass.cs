@@ -346,6 +346,7 @@ namespace Bridge
                 openedFromParameters = false;
                 TextBoxChosenXML.Clear();
                 ButtonChoseTargetXML.Enabled = true;
+                AddParameters.Enabled = true;
             } else { 
                  MetroFramework.MetroMessageBox.Show(this, "Выберите программу-исполнителя!", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -776,6 +777,22 @@ namespace Bridge
             {
                 e.Handled = true;
             }
+        }
+
+        private async void stubButton_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo psi = new ProcessStartInfo
+            {
+                FileName = "cmd.exe",
+                Arguments = "/c mpiexec -n 2 -ppn 1 -hosts LENOVO-PC examin.exe -IsPrintFile true -IsPlot true -r 3.5 -rEps 0.02 -Dimension 2 -libPath stronginc3.dll -iterPointsSavePath itr.dat",
+                // '/c' is close cmd after run
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden,
+                CreateNoWindow = true
+            };
+    
+            await TaskEx.Run(() => SingleStartFunc(psi, String.Empty, true));
         }
     }
     public static class Exten

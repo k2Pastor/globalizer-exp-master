@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<journal>
+
+ <exp0>
+
+<date>
+16.02.2022 20:48:47
+</date>
+<expPath>
+D:\Diploma\globalizer-exp-master\globalizer-exp-master\example\Experiments\Series(20-48-46)_16.02.22{2}\[20-48-47]_16.02.22_{1}\Log.txt
+</expPath>
+ <confPath>
+D:\Diploma\globalizer-exp-master\globalizer-exp-master\example\Configurations\One.xml
+</confPath>
+
+ </exp0>
+
+ <exp1>
+
+<date>
+16.02.2022 20:48:47
+</date>
+<expPath>
+D:\Diploma\globalizer-exp-master\globalizer-exp-master\example\Experiments\Series(20-48-46)_16.02.22{2}\[20-48-47]_16.02.22_{2}\Log.txt
+</expPath>
+ <confPath>
+D:\Diploma\globalizer-exp-master\globalizer-exp-master\example\Configurations\Strong.xml
+</confPath>
+
+ </exp1>
+
+ <exp2>
+
+<date>
+16.02.2022 20:48:47
+</date>
+<expPath>
+D:\Diploma\globalizer-exp-master\globalizer-exp-master\example\Experiments\Series(20-48-46)_16.02.22{2}\[20-48-47]_16.02.22_{3}\Log.txt
+</expPath>
+ <confPath>
+D:\Diploma\globalizer-exp-master\globalizer-exp-master\example\Configurations\Two.xml
+</confPath>
+
+ </exp2>
+
+</journal>
+<?include somedata?>

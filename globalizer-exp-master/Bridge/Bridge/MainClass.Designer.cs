@@ -77,6 +77,7 @@
             this.MainTabControl = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.Description = new MetroFramework.Controls.MetroPanel();
+            this.AddDescriptionLabel = new MetroFramework.Controls.MetroLabel();
             this.ClearJournalButton = new MetroFramework.Controls.MetroButton();
             this.DeleteExperimentButton = new MetroFramework.Controls.MetroButton();
             this.ClearDescription = new MetroFramework.Controls.MetroButton();
@@ -138,6 +139,7 @@
             this.ResLabel2 = new MetroFramework.Controls.MetroLabel();
             this.SearchTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.ChosePanel = new MetroFramework.Controls.MetroPanel();
+            this.stubButton = new MetroFramework.Controls.MetroButton();
             this.AddParameters = new MetroFramework.Controls.MetroButton();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.CheckMpiCom = new System.Windows.Forms.CheckBox();
@@ -248,7 +250,6 @@
             this.Create1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddDescriptionLabel = new MetroFramework.Controls.MetroLabel();
             this.MainTabControl.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
             this.Description.SuspendLayout();
@@ -378,6 +379,17 @@
             this.Description.VerticalScrollbarBarColor = true;
             this.Description.VerticalScrollbarHighlightOnWheel = false;
             this.Description.VerticalScrollbarSize = 10;
+            // 
+            // AddDescriptionLabel
+            // 
+            this.AddDescriptionLabel.AutoSize = true;
+            this.AddDescriptionLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.AddDescriptionLabel.Location = new System.Drawing.Point(4, 42);
+            this.AddDescriptionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.AddDescriptionLabel.Name = "AddDescriptionLabel";
+            this.AddDescriptionLabel.Size = new System.Drawing.Size(140, 20);
+            this.AddDescriptionLabel.TabIndex = 93;
+            this.AddDescriptionLabel.Text = "Введите описание:";
             // 
             // ClearJournalButton
             // 
@@ -1409,6 +1421,7 @@
             // ChosePanel
             // 
             this.ChosePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ChosePanel.Controls.Add(this.stubButton);
             this.ChosePanel.Controls.Add(this.AddParameters);
             this.ChosePanel.Controls.Add(this.metroLabel6);
             this.ChosePanel.Controls.Add(this.CheckMpiCom);
@@ -1426,6 +1439,18 @@
             this.ChosePanel.VerticalScrollbarBarColor = true;
             this.ChosePanel.VerticalScrollbarHighlightOnWheel = false;
             this.ChosePanel.VerticalScrollbarSize = 13;
+            // 
+            // stubButton
+            // 
+            this.stubButton.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.stubButton.Location = new System.Drawing.Point(720, 131);
+            this.stubButton.Margin = new System.Windows.Forms.Padding(4);
+            this.stubButton.Name = "stubButton";
+            this.stubButton.Size = new System.Drawing.Size(216, 36);
+            this.stubButton.TabIndex = 56;
+            this.stubButton.Text = "Stub";
+            this.stubButton.UseSelectable = true;
+            this.stubButton.Click += new System.EventHandler(this.stubButton_Click);
             // 
             // AddParameters
             // 
@@ -3331,17 +3356,6 @@
             this.DelToolStripMenuItem.Text = "Удалить";
             this.DelToolStripMenuItem.Click += new System.EventHandler(this.DelToolStripMenuItem_Click);
             // 
-            // AddDescriptionLabel
-            // 
-            this.AddDescriptionLabel.AutoSize = true;
-            this.AddDescriptionLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.AddDescriptionLabel.Location = new System.Drawing.Point(4, 42);
-            this.AddDescriptionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.AddDescriptionLabel.Name = "AddDescriptionLabel";
-            this.AddDescriptionLabel.Size = new System.Drawing.Size(140, 20);
-            this.AddDescriptionLabel.TabIndex = 93;
-            this.AddDescriptionLabel.Text = "Введите описание:";
-            // 
             // MainClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3589,6 +3603,7 @@
         private MetroFramework.Controls.MetroButton DeleteExperimentButton;
         private MetroFramework.Controls.MetroButton ClearJournalButton;
         private MetroFramework.Controls.MetroLabel AddDescriptionLabel;
+        private MetroFramework.Controls.MetroButton stubButton;
     }
 }
 

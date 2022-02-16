@@ -80,27 +80,24 @@ namespace Bridge
                 if ((File.Exists(_Config_path)) && (File.Exists(_ChosenProgram)))
                 {
                     String CurConfigName = new DirectoryInfo(_Config_path).Name;
-                    if (commandLineData == "")
+                    DataSet ds = new DataSet();
+                    ds.ReadXml(CurConfigName);
+                    foreach (DataRow item in ds.Tables["exe"].Rows)
                     {
-                        DataSet ds = new DataSet();
-                        ds.ReadXml(CurConfigName);
-                        foreach (DataRow item in ds.Tables["exe"].Rows)
+                        int n = -1;
+                        foreach (object cell in item.ItemArray)
                         {
-                            int n = -1;
-                            foreach (object cell in item.ItemArray)
+                            n++;
+                            if (n < (item.ItemArray.Length / 2))
                             {
-                                n++;
-                                if (n < (item.ItemArray.Length / 2))
-                                {
-                                    commandLineData += item["key" + n];
-                                    commandLineData += " ";
-                                    commandLineData += item["par" + n];
-                                    commandLineData += " ";
-                                }
-
+                                commandLineData += item["key" + n];
+                                commandLineData += " ";
+                                commandLineData += item["par" + n];
+                                commandLineData += " ";
                             }
 
                         }
+
                     }
                     /** For Operation Characteristics' Graphic **/
                     if (NMaxTextBox.Text != String.Empty && !SingleStart)
@@ -159,7 +156,7 @@ namespace Bridge
                 };
                 setInitialDataParams();
                 ProgressBarJour.Value = 0;
-                await TaskEx.Run(() => SingleStartFunc(psi, _Source_Config_path, UseMpi));
+                await TaskEx.Run(() => SingleStartFunc(psi, String.Empty, UseMpi));
                 ProgressBarJour.Value = 100;
             }
         }

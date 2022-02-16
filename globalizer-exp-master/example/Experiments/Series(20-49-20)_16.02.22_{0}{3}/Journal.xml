@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<journal>
+
+ <exp0>
+
+<date>
+16.02.2022 20:49:20
+</date>
+<expPath>
+D:\Diploma\globalizer-exp-master\globalizer-exp-master\example\Experiments\Series(20-49-20)_16.02.22_{0}{3}\[20-49-20]_16.02.22_{0}\Log.txt
+</expPath>
+ <confPath>
+D:\Diploma\globalizer-exp-master\globalizer-exp-master\example\Configurations\Strong.xml
+</confPath>
+
+ </exp0>
+
+</journal>
+<?include somedata?>
