@@ -250,6 +250,8 @@
             this.Create1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ChooseDistributedFileButton = new MetroFramework.Controls.MetroButton();
+            this.TextBoxChosenDistributedFile = new MetroFramework.Controls.MetroTextBox();
             this.MainTabControl.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
             this.Description.SuspendLayout();
@@ -309,10 +311,10 @@
             // Run
             // 
             this.Run.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.Run.Location = new System.Drawing.Point(15, 86);
+            this.Run.Location = new System.Drawing.Point(13, 113);
             this.Run.Margin = new System.Windows.Forms.Padding(4);
             this.Run.Name = "Run";
-            this.Run.Size = new System.Drawing.Size(216, 36);
+            this.Run.Size = new System.Drawing.Size(302, 34);
             this.Run.TabIndex = 23;
             this.Run.Text = "Запуск";
             this.Run.UseSelectable = true;
@@ -825,6 +827,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.metroPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroPanel3.Controls.Add(this.metroPanel7);
+            this.metroPanel3.Controls.Add(this.stubButton);
             this.metroPanel3.Controls.Add(this.metroLabel11);
             this.metroPanel3.Controls.Add(this.metroLabel10);
             this.metroPanel3.Controls.Add(this.metroButton2);
@@ -1421,7 +1424,8 @@
             // ChosePanel
             // 
             this.ChosePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ChosePanel.Controls.Add(this.stubButton);
+            this.ChosePanel.Controls.Add(this.TextBoxChosenDistributedFile);
+            this.ChosePanel.Controls.Add(this.ChooseDistributedFileButton);
             this.ChosePanel.Controls.Add(this.AddParameters);
             this.ChosePanel.Controls.Add(this.metroLabel6);
             this.ChosePanel.Controls.Add(this.CheckMpiCom);
@@ -1443,7 +1447,7 @@
             // stubButton
             // 
             this.stubButton.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.stubButton.Location = new System.Drawing.Point(720, 131);
+            this.stubButton.Location = new System.Drawing.Point(406, 4);
             this.stubButton.Margin = new System.Windows.Forms.Padding(4);
             this.stubButton.Name = "stubButton";
             this.stubButton.Size = new System.Drawing.Size(216, 36);
@@ -1455,10 +1459,10 @@
             // AddParameters
             // 
             this.AddParameters.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.AddParameters.Location = new System.Drawing.Point(15, 142);
+            this.AddParameters.Location = new System.Drawing.Point(14, 155);
             this.AddParameters.Margin = new System.Windows.Forms.Padding(4);
             this.AddParameters.Name = "AddParameters";
-            this.AddParameters.Size = new System.Drawing.Size(216, 31);
+            this.AddParameters.Size = new System.Drawing.Size(303, 31);
             this.AddParameters.TabIndex = 55;
             this.AddParameters.Text = "Задать параметры";
             this.AddParameters.UseSelectable = true;
@@ -1480,7 +1484,7 @@
             // 
             this.CheckMpiCom.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CheckMpiCom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CheckMpiCom.Location = new System.Drawing.Point(233, 94);
+            this.CheckMpiCom.Location = new System.Drawing.Point(329, 113);
             this.CheckMpiCom.Margin = new System.Windows.Forms.Padding(4);
             this.CheckMpiCom.Name = "CheckMpiCom";
             this.CheckMpiCom.Size = new System.Drawing.Size(231, 41);
@@ -1491,10 +1495,10 @@
             // ButtonChoseTargetXML
             // 
             this.ButtonChoseTargetXML.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.ButtonChoseTargetXML.Location = new System.Drawing.Point(13, 34);
+            this.ButtonChoseTargetXML.Location = new System.Drawing.Point(14, 30);
             this.ButtonChoseTargetXML.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonChoseTargetXML.Name = "ButtonChoseTargetXML";
-            this.ButtonChoseTargetXML.Size = new System.Drawing.Size(216, 36);
+            this.ButtonChoseTargetXML.Size = new System.Drawing.Size(302, 36);
             this.ButtonChoseTargetXML.TabIndex = 24;
             this.ButtonChoseTargetXML.Text = "Выбрать конфигурацию";
             this.ButtonChoseTargetXML.UseSelectable = true;
@@ -1506,17 +1510,17 @@
             // 
             // 
             this.TextBoxChosenXML.CustomButton.Image = null;
-            this.TextBoxChosenXML.CustomButton.Location = new System.Drawing.Point(643, 2);
+            this.TextBoxChosenXML.CustomButton.Location = new System.Drawing.Point(573, 2);
             this.TextBoxChosenXML.CustomButton.Margin = new System.Windows.Forms.Padding(5);
             this.TextBoxChosenXML.CustomButton.Name = "";
-            this.TextBoxChosenXML.CustomButton.Size = new System.Drawing.Size(53, 53);
+            this.TextBoxChosenXML.CustomButton.Size = new System.Drawing.Size(31, 31);
             this.TextBoxChosenXML.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.TextBoxChosenXML.CustomButton.TabIndex = 1;
             this.TextBoxChosenXML.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.TextBoxChosenXML.CustomButton.UseSelectable = true;
             this.TextBoxChosenXML.CustomButton.Visible = false;
             this.TextBoxChosenXML.Lines = new string[0];
-            this.TextBoxChosenXML.Location = new System.Drawing.Point(237, 34);
+            this.TextBoxChosenXML.Location = new System.Drawing.Point(329, 30);
             this.TextBoxChosenXML.Margin = new System.Windows.Forms.Padding(4);
             this.TextBoxChosenXML.MaxLength = 32767;
             this.TextBoxChosenXML.Multiline = true;
@@ -1527,7 +1531,7 @@
             this.TextBoxChosenXML.SelectionLength = 0;
             this.TextBoxChosenXML.SelectionStart = 0;
             this.TextBoxChosenXML.ShortcutsEnabled = true;
-            this.TextBoxChosenXML.Size = new System.Drawing.Size(699, 58);
+            this.TextBoxChosenXML.Size = new System.Drawing.Size(607, 36);
             this.TextBoxChosenXML.TabIndex = 31;
             this.TextBoxChosenXML.UseSelectable = true;
             this.TextBoxChosenXML.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -3356,6 +3360,51 @@
             this.DelToolStripMenuItem.Text = "Удалить";
             this.DelToolStripMenuItem.Click += new System.EventHandler(this.DelToolStripMenuItem_Click);
             // 
+            // ChooseDistributedFileButton
+            // 
+            this.ChooseDistributedFileButton.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.ChooseDistributedFileButton.Location = new System.Drawing.Point(14, 74);
+            this.ChooseDistributedFileButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ChooseDistributedFileButton.Name = "ChooseDistributedFileButton";
+            this.ChooseDistributedFileButton.Size = new System.Drawing.Size(303, 31);
+            this.ChooseDistributedFileButton.TabIndex = 57;
+            this.ChooseDistributedFileButton.Text = "Выбрать файл распределенного запуска";
+            this.ChooseDistributedFileButton.UseSelectable = true;
+            this.ChooseDistributedFileButton.Click += new System.EventHandler(this.ChooseDistributedFileButton_Click);
+            // 
+            // TextBoxChosenDistributedFile
+            // 
+            // 
+            // 
+            // 
+            this.TextBoxChosenDistributedFile.CustomButton.Image = null;
+            this.TextBoxChosenDistributedFile.CustomButton.Location = new System.Drawing.Point(577, 1);
+            this.TextBoxChosenDistributedFile.CustomButton.Margin = new System.Windows.Forms.Padding(5);
+            this.TextBoxChosenDistributedFile.CustomButton.Name = "";
+            this.TextBoxChosenDistributedFile.CustomButton.Size = new System.Drawing.Size(29, 29);
+            this.TextBoxChosenDistributedFile.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TextBoxChosenDistributedFile.CustomButton.TabIndex = 1;
+            this.TextBoxChosenDistributedFile.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TextBoxChosenDistributedFile.CustomButton.UseSelectable = true;
+            this.TextBoxChosenDistributedFile.CustomButton.Visible = false;
+            this.TextBoxChosenDistributedFile.Lines = new string[0];
+            this.TextBoxChosenDistributedFile.Location = new System.Drawing.Point(329, 76);
+            this.TextBoxChosenDistributedFile.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBoxChosenDistributedFile.MaxLength = 32767;
+            this.TextBoxChosenDistributedFile.Multiline = true;
+            this.TextBoxChosenDistributedFile.Name = "TextBoxChosenDistributedFile";
+            this.TextBoxChosenDistributedFile.PasswordChar = '\0';
+            this.TextBoxChosenDistributedFile.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.TextBoxChosenDistributedFile.SelectedText = "";
+            this.TextBoxChosenDistributedFile.SelectionLength = 0;
+            this.TextBoxChosenDistributedFile.SelectionStart = 0;
+            this.TextBoxChosenDistributedFile.ShortcutsEnabled = true;
+            this.TextBoxChosenDistributedFile.Size = new System.Drawing.Size(607, 31);
+            this.TextBoxChosenDistributedFile.TabIndex = 87;
+            this.TextBoxChosenDistributedFile.UseSelectable = true;
+            this.TextBoxChosenDistributedFile.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TextBoxChosenDistributedFile.WaterMarkFont = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // MainClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3604,6 +3653,8 @@
         private MetroFramework.Controls.MetroButton ClearJournalButton;
         private MetroFramework.Controls.MetroLabel AddDescriptionLabel;
         private MetroFramework.Controls.MetroButton stubButton;
+        private MetroFramework.Controls.MetroButton ChooseDistributedFileButton;
+        private MetroFramework.Controls.MetroTextBox TextBoxChosenDistributedFile;
     }
 }
 

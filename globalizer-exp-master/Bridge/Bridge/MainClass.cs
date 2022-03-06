@@ -19,6 +19,7 @@ namespace Bridge
         private String gChosenXML = "";
         private String gChosenDirXML = Directory.GetCurrentDirectory() + "\\" + "Configurations";
         private String gTempChosenXML = "";
+        private String gChosenDistributedFile = "";
         private String gChosenProgram;
         private String defaultChosenProgram = "examin.exe";
         private String commandLineData = "";
@@ -784,7 +785,7 @@ namespace Bridge
             ProcessStartInfo psi = new ProcessStartInfo
             {
                 FileName = "cmd.exe",
-                Arguments = "/c mpiexec -n 2 -ppn 1 -hosts LENOVO-PC examin.exe -IsPrintFile true -IsPlot true -r 3.5 -rEps 0.02 -Dimension 2 -libPath stronginc3.dll -iterPointsSavePath itr.dat",
+                Arguments = "/c mpiexec -n 2 -ppn 1 -hosts ws-2k-110-02,ws-2k-110-03 \\\\ws-2k-110-02\\example\\examin.exe -IsPrintFile true -IsPlot true -r 3.5 -rEps 0.02 -Dimension 2 -libPath stronginc3.dll -iterPointsSavePath itr.dat",
                 // '/c' is close cmd after run
                 RedirectStandardOutput = true,
                 UseShellExecute = false,
@@ -793,6 +794,11 @@ namespace Bridge
             };
     
             await TaskEx.Run(() => SingleStartFunc(psi, String.Empty, true));
+        }
+
+        private void ChooseDistributedFileButton_Click(object sender, EventArgs e)
+        {
+            ChooseDistributedLaunchFile();
         }
     }
     public static class Exten

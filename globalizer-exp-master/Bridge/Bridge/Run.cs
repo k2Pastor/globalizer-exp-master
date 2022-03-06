@@ -650,20 +650,33 @@ namespace Bridge
                     File.Copy(gChosenXML, TempXML);
                 }
                 gTempChosenXML = TempXML;
-            }
-           
-            if (File.Exists(gChosenXML))
-            {
                 TextBoxChosenXML.Text = gChosenXML;
-            }
-            else
+            } else
             {
-                if (!File.Exists(gChosenXML))
-                {
-                    MetroFramework.MetroMessageBox.Show(this, "XML не найден.", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                MetroFramework.MetroMessageBox.Show(this, "XML не найден.", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void ChooseDistributedLaunchFile()
+        {
+            OpenFileDialog OPF = new OpenFileDialog();
+            OPF.InitialDirectory = Directory.GetCurrentDirectory();
+            OPF.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            if (OPF.ShowDialog() == DialogResult.OK)
+            {
+                gChosenDistributedFile = OPF.FileName;
+            }
+
+            if (File.Exists(gChosenDistributedFile))
+            {
+                TextBoxChosenDistributedFile.Text = gChosenDistributedFile;
+            } else
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Файл распределенного запуска не найден.", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+
         private void ChoseDirXML()
         {
             if (File.Exists(TempXML))
