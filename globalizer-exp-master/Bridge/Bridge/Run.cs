@@ -37,25 +37,41 @@ namespace Bridge
 
         private Excel.Application excelApp;
 
-        private void SetMpiRun(bool _UseMpi, bool _SingleStart)
+        private void SetMpiRun(bool _UseMpi)
         {
-            if (_SingleStart)
+            if (_UseMpi)
             {
-                if (CheckMpiCom.Checked)
+                if (TextBoxChosenDistributedFile.Text != null && TextBoxChosenDistributedFile.Text != String.Empty)
+                {
+                    if (File.Exists(TextBoxChosenDistributedFile.Text))
+                    {
+                        MpiCommand = "mpiexec -n " + TextMpiComm.Text + " -ppn 1 -hosts ";
+                        String[] fileLines = File.ReadAllLines(TextBoxChosenDistributedFile.Text);
+                        for (int i = 0; i < fileLines.Length; i++)
+                        {
+                            if (i != fileLines.Length - 1)
+                            {
+                                MpiCommand += fileLines[i] + ",";
+                            } else
+                            {
+                                MpiCommand += fileLines[i];
+                            }
+                        }
+                    } else {
+                        MetroFramework.MetroMessageBox.Show(this, "Файл распределенного запуска не найден.", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                } else
                 {
                     MpiCommand = "mpiexec -n " + TextMpiComm.Text;
                 }
-            }
-            else
+           
+            } else
             {
-            if (_UseMpi)
-            {
-                MpiCommand = "mpiexec -n " + TextMpiComm.Text;
-            }
-            else
+                MpiCommand = String.Empty;
+                if (TextBoxChosenDistributedFile.Text != null || TextBoxChosenDistributedFile.Text != String.Empty)
                 {
-                MpiCommand = "";
-            }
+                    throw new DistributedLaunchException("Для распределенного запуска необходимо использовать MPI");
+                }
             }
         }
         private void SingleStartFunc(ProcessStartInfo _psi, String _Source_Config_path, bool UseMpi)
@@ -107,7 +123,7 @@ namespace Bridge
                         commandLineData += NMaxTextBox.Text;
                     }
 
-                    SetMpiRun(UseMpi, SingleStart);
+                    SetMpiRun(UseMpi);
 
                     ProcessStartInfo psi = new ProcessStartInfo
                     {
@@ -119,6 +135,8 @@ namespace Bridge
                         WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden,
                         CreateNoWindow = true
                     };
+
+                    TextBoxChosenDirXML.Text = "/c " + MpiCommand + " " + ProgramName + " " + commandLineData;
 
                     if (SingleStart)
                     {
@@ -143,7 +161,7 @@ namespace Bridge
             }
             else if ((_Config_path == "") && openedFromParameters && commandLineData != "")
             {
-                SetMpiRun(UseMpi, SingleStart);
+                SetMpiRun(UseMpi);
 
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
@@ -154,6 +172,9 @@ namespace Bridge
                     WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden,
                     CreateNoWindow = true
                 };
+
+                TextBoxChosenDirXML.Text = "/c " + MpiCommand + " " + ProgramName + " " + commandLineData;
+
                 setInitialDataParams();
                 ProgressBarJour.Value = 0;
                 await TaskEx.Run(() => SingleStartFunc(psi, String.Empty, UseMpi));

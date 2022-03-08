@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DistributedLaunchException.cs" />
     <Compile Include="GraphicsGallery.cs">
       <SubType>Form</SubType>
     </Compile>
