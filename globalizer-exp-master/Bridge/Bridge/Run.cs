@@ -89,12 +89,13 @@ namespace Bridge
         }
         private async void Run_exp(String _Temp_Config_path, String _Source_Config_path, String _ChosenProgram, String commandLineData, bool UseMpi, bool SingleStart, bool openedFromParameters)
         {
-            String ProgramName = "examin.exe";
+            String ProgramName = _ChosenProgram != String.Empty ? _ChosenProgram : "examin.exe";
             String _Config_path = _Temp_Config_path;
             if ((_Config_path != "") && !openedFromParameters && commandLineData == "")
             {
                 if ((File.Exists(_Config_path)) && (File.Exists(_ChosenProgram)))
                 {
+                   
                     String CurConfigName = new DirectoryInfo(_Config_path).Name;
                     DataSet ds = new DataSet();
                     ds.ReadXml(CurConfigName);
