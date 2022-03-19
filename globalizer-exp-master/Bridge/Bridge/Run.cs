@@ -68,7 +68,7 @@ namespace Bridge
             } else
             {
                 MpiCommand = String.Empty;
-                if (TextBoxChosenDistributedFile.Text != null || TextBoxChosenDistributedFile.Text != String.Empty)
+                if (TextBoxChosenDistributedFile.Text != String.Empty)
                 {
                     throw new DistributedLaunchException("Для распределенного запуска необходимо использовать MPI");
                 }

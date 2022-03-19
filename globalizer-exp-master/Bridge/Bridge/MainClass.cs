@@ -346,6 +346,7 @@ namespace Bridge
                 Run_exp(gTempChosenXML, gChosenXML, gChosenProgram, commandLineData, CheckMpiCom.Checked, true, openedFromParameters);
                 openedFromParameters = false;
                 TextBoxChosenXML.Clear();
+                TextBoxChosenDistributedFile.Clear();
                 ButtonChoseTargetXML.Enabled = true;
                 AddParameters.Enabled = true;
             } else { 
