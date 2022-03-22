@@ -45,7 +45,7 @@ namespace Bridge
                 {
                     if (File.Exists(TextBoxChosenDistributedFile.Text))
                     {
-                        MpiCommand = "mpiexec -n " + TextMpiComm.Text + " -ppn 1 -hosts ";
+                        MpiCommand = "mpiexec -n " + TextMpiN.Text + " -ppn 1 -hosts ";
                         String[] fileLines = File.ReadAllLines(TextBoxChosenDistributedFile.Text);
                         for (int i = 0; i < fileLines.Length; i++)
                         {
@@ -62,7 +62,7 @@ namespace Bridge
                     }
                 } else
                 {
-                    MpiCommand = "mpiexec -n " + TextMpiComm.Text;
+                    MpiCommand = "mpiexec -n " + TextMpiN.Text;
                 }
            
             } else
@@ -262,7 +262,7 @@ namespace Bridge
 
             Stop = true;
             RunComboFin.Enabled = true;
-            TextMpiComm.Enabled = true;
+            TextMpiN.Enabled = true;
             ButtonChoseTargetXML.Enabled = true;
             ButtonChoseProgram.Enabled = true;
             Run.Enabled = true;
@@ -283,7 +283,7 @@ namespace Bridge
                 }
             }
 
-            for (int i = 0; i < Convert.ToInt32(TextMpiComm.Text); i++)
+            for (int i = 0; i < Convert.ToInt32(TextMpiN.Text); i++)
             {
                 if (i == 0)
                 {
@@ -353,7 +353,7 @@ namespace Bridge
             }
             
             RunComboFin.Enabled = true;
-                TextMpiComm.Enabled = true;
+                TextMpiN.Enabled = true;
                 ButtonChoseTargetXML.Enabled = true;
                 ButtonChoseProgram.Enabled = true;
                 Run.Enabled = true;
@@ -457,7 +457,7 @@ namespace Bridge
            //линии уровня
            if (useMpi)
             {
-                for (int i = 0; i < Convert.ToInt32(TextMpiComm.Text); i++)
+                for (int i = 0; i < Convert.ToInt32(TextMpiN.Text); i++)
                 {
                     if (i == 0)
                     {

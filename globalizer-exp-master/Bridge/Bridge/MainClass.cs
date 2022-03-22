@@ -277,7 +277,7 @@ namespace Bridge
             if (ComboSize != 0)
             {
                 RunComboFin.Enabled = false;
-                TextMpiComm.Enabled = false;
+                TextMpiN.Enabled = false;
                 ButtonChoseTargetXML.Enabled = false;
                 ButtonChoseProgram.Enabled = false;
                 Run.Enabled = false;
@@ -800,6 +800,23 @@ namespace Bridge
         private void ChooseDistributedFileButton_Click(object sender, EventArgs e)
         {
             ChooseDistributedLaunchFile();
+        }
+
+        private void CheckMpiCom_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckMpiCom.Checked)
+            {
+                MpiNLabel.Visible = true;
+                MpiPpnLabel.Visible = true;
+                TextMpiPpn.Visible = true;
+                TextMpiN.Visible = true;
+            } else
+            {
+                MpiNLabel.Visible = false;
+                MpiPpnLabel.Visible = false;
+                TextMpiPpn.Visible = false;
+                TextMpiN.Visible = false;
+            }
         }
     }
     public static class Exten
