@@ -45,7 +45,7 @@ namespace Bridge
                 {
                     if (File.Exists(TextBoxChosenDistributedFile.Text))
                     {
-                        MpiCommand = "mpiexec -n " + TextMpiN.Text + " -ppn 1 -hosts ";
+                        MpiCommand = "mpiexec -n " + TextMpiN.Text + " -ppn " +  TextMpiPpn.Text + " -hosts ";
                         String[] fileLines = File.ReadAllLines(TextBoxChosenDistributedFile.Text);
                         for (int i = 0; i < fileLines.Length; i++)
                         {
